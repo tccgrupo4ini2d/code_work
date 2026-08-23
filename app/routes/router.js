@@ -5,11 +5,11 @@ router.get("/", (req, res)=>{
     res.render("pages/index")
 })
 
-router.post("/projetos", (req, res)=>{
+router.get("/projetos", (req, res)=>{
     res.render("pages/projetos")
 })
 
-router.post("/solicitar", (req, res)=>{
+router.get("/solicitar", (req, res)=>{
     res.render("pages/solicitar")
 })
 
