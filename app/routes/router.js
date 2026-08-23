@@ -5,10 +5,13 @@ router.get("/", (req, res)=>{
     res.render("pages/index")
 })
 
-router.post("/adm", (req, res)=>{
-    
+router.post("/projetos", (req, res)=>{
+    res.render("pages/projetos")
 })
 
+router.post("/solicitar", (req, res)=>{
+    res.render("pages/solicitar")
+})
 
 
 module.exports = router;
