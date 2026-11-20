@@ -5,11 +5,11 @@ router.get("/", (req, res)=>{
     res.render("pages/index")
 })
 
-router.get("/projetos", (req, res)=>{
+router.get("/cadastrofreela", (req, res)=>{
     res.render("pages/projetos")
 })
 
-router.get("/solicitar", (req, res)=>{
+router.get("/cadastroc", (req, res)=>{
     res.render("pages/solicitar")
 })
 
