@@ -1,0 +1,337 @@
+/* Paleta de cores do projeto */
+:root {
+  --azul-escuro: #1E527D;
+  --azul-destaque: #4599CD;
+  --azul-medio: #4386AF;
+  --azul-claro: #6DA9CB;
+  --cinza-borda: #B8C0C8;
+  --cinza-input: #8E959E;
+  --fundo-pagina: #FFFFFF;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Dongle', sans-serif;
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  background-color: var(--fundo-pagina);
+  color: #111111;
+  font-size: 24px;
+}
+
+.pagina {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Cabeçalho */
+header {
+  width: 100%;
+  padding: 12px 20px;
+  border-bottom: 1px solid var(--azul-claro);
+  background-color: #FFFFFF;
+}
+
+.link-logo {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.logo-img {
+  height: 36px;
+  width: auto;
+  min-width: 36px;
+  display: block;
+  object-fit: contain;
+}
+
+/* Área principal */
+main {
+  flex: 1;
+  width: 100%;
+  max-width: 560px;
+  margin: 0 auto;
+  padding: 20px 18px 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Cards */
+.card {
+  background-color: #FFFFFF;
+  border: 1px solid var(--cinza-borda);
+  border-radius: 18px;
+  padding: 20px 18px;
+}
+
+/* Card 1: Topo do perfil */
+.perfil-topo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.foto-perfil {
+  width: 112px;
+  height: 112px;
+  border-radius: 50%;
+  object-fit: cover;
+  background-color: #E5E7EB;
+  display: block;
+  margin-bottom: 12px;
+}
+
+.nome-linha {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+}
+
+.input-nome {
+  border: none;
+  background: transparent;
+  text-align: center;
+  font-size: clamp(34px, 5vw, 42px);
+  font-weight: 400;
+  line-height: 1.05;
+  color: #111111;
+  width: auto;
+  max-width: 240px;
+  outline: none;
+  border-radius: 8px;
+  padding: 0 6px;
+}
+
+.input-nome:focus {
+  background-color: #F4F9FC;
+  outline: 1px solid var(--azul-claro);
+}
+
+.btn-icone {
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  flex-shrink: 0;
+}
+
+.icone-editar {
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+  display: block;
+}
+
+.icone-editar-pequeno {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+  display: block;
+}
+
+.estrelas {
+  color: #E2E4E7;
+  font-size: 30px;
+  line-height: 1.1;
+  letter-spacing: 3px;
+  margin: 6px 0 18px;
+}
+
+.divisor-azul {
+  width: 100%;
+  border: none;
+  border-top: 1px solid var(--azul-claro);
+}
+
+.input-frase {
+  width: 100%;
+  border: none;
+  background: transparent;
+  text-align: center;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.2;
+  color: #111111;
+  padding: 14px 8px;
+  outline: none;
+}
+
+.input-frase:focus {
+  background-color: #F4F9FC;
+}
+
+/* Card 2: Sobre mim */
+.titulo-linha {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.sobre-mim h2 {
+  font-size: 30px;
+  font-weight: 400;
+  line-height: 1.05;
+  color: #111111;
+}
+
+.icone-ajuda {
+  width: 22px;
+  height: 22px;
+  object-fit: contain;
+  display: block;
+}
+
+textarea {
+  width: 100%;
+  min-height: 185px;
+  border: 1.5px solid var(--cinza-input);
+  border-radius: 16px;
+  padding: 14px 16px;
+  font-size: 23px;
+  line-height: 1.2;
+  color: #111111;
+  background-color: #FFFFFF;
+  resize: vertical;
+  outline: none;
+}
+
+textarea::placeholder {
+  color: #9AA0A6;
+}
+
+textarea:focus {
+  border-color: var(--azul-destaque);
+}
+
+/* Card 3: Informações de contato */
+.contato h2 {
+  font-size: 28px;
+  font-weight: 400;
+  line-height: 1.1;
+  color: #111111;
+  margin-bottom: 12px;
+}
+
+.label-com-icone {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 10px;
+  margin-bottom: 6px;
+}
+
+.label-com-icone label {
+  font-size: 25px;
+  font-weight: 400;
+  line-height: 1.1;
+  color: #111111;
+}
+
+.campo-texto {
+  width: 100%;
+  border: 1.5px solid var(--cinza-input);
+  border-radius: 14px;
+  padding: 6px 14px;
+  font-size: 24px;
+  line-height: 1.3;
+  color: #111111;
+  background-color: #FFFFFF;
+  outline: none;
+}
+
+.campo-texto:focus {
+  border-color: var(--azul-destaque);
+}
+
+/* Campo Telefone com bandeira do Brasil e +55 */
+.campo-telefone {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border: 1.5px solid #222222;
+  border-radius: 14px;
+  padding: 6px 14px;
+  background-color: #FFFFFF;
+}
+
+.campo-telefone:focus-within {
+  border-color: var(--azul-destaque);
+}
+
+.bandeira-brasil {
+  width: 24px;
+  height: 16px;
+  object-fit: cover;
+  display: block;
+  flex-shrink: 0;
+}
+
+.ddi {
+  font-size: 24px;
+  line-height: 1.2;
+  color: #9AA0A6;
+  flex-shrink: 0;
+}
+
+.campo-telefone input {
+  flex: 1;
+  width: 100%;
+  border: none;
+  outline: none;
+  font-size: 24px;
+  line-height: 1.2;
+  color: #111111;
+  background: transparent;
+}
+
+/* Responsividade para telas maiores (PC) */
+@media (min-width: 768px) {
+  header {
+    padding: 14px 40px;
+  }
+
+  main {
+    padding: 32px 24px 60px;
+    gap: 24px;
+  }
+
+  .card {
+    padding: 24px;
+  }
+}
+
+/* Responsividade quando a janela fecha/diminui na largura ou altura */
+@media (max-width: 600px), (max-height: 550px) {
+  header {
+    padding: 10px 16px;
+  }
+
+  main {
+    padding: 14px 12px 28px;
+    gap: 14px;
+  }
+
+  .card {
+    padding: 16px 14px;
+  }
+
+  textarea {
+    min-height: 140px;
+  }
+}

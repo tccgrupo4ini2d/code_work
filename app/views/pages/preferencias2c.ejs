@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Preferências</title>
+
+  <!-- Fonte Dongle -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Dongle:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- CSS externo -->
+  <link rel="stylesheet" href="css/style_preferencias2c.css">
+</head>
+<body>
+
+  <!-- Cabeçalho com a logo -->
+  <header>
+    <img src="img/logo-codework.png" href="/" alt="Logo CW">
+  </header>
+
+  <!-- Conteúdo principal -->
+  <main>
+
+    <!-- Indicador de etapas (1 e 2) alinhado -->
+    <section class="etapas" aria-label="Progresso">
+      <div class="passo">
+        <div class="circulo">1</div>
+        <span>Etapa 1</span>
+      </div>
+
+      <div class="linha-etapa"></div>
+
+      <div class="passo ativo">
+        <div class="circulo">2</div>
+        <span>Preferências</span>
+      </div>
+    </section>
+
+    <!-- Título e descrição -->
+    <section class="intro">
+      <h1>Ajuste suas preferências</h1>
+      <p>Responda estas 3 perguntas para receber melhores propostas. Esta etapa é opcional.</p>
+    </section>
+
+    <!-- Formulário com seleção única por pergunta -->
+    <form>
+
+      <!-- Pergunta 1 -->
+      <section class="pergunta">
+        <h2>
+          <img src="icones/icone-local.svg" alt="" class="icone">
+          De onde você prefere receber propostas?
+        </h2>
+
+        <div class="opcoes">
+          <input type="radio" id="brasil" name="local" value="brasil">
+          <label for="brasil">Brasil</label>
+
+          <input type="radio" id="latam" name="local" value="latam">
+          <label for="latam">LATAM</label>
+
+          <input type="radio" id="exterior" name="local" value="exterior">
+          <label for="exterior">Exterior</label>
+        </div>
+      </section>
+
+      <!-- Pergunta 2 -->
+      <section class="pergunta">
+        <h2>
+          <img src="icones/icone-relogio.svg" alt="" class="icone">
+          Quando você precisa começar?
+        </h2>
+
+        <div class="opcoes">
+          <input type="radio" id="hoje" name="prazo" value="hoje">
+          <label for="hoje">Hoje</label>
+
+          <input type="radio" id="semana" name="prazo" value="semana">
+          <label for="semana">Em uma semana</label>
+
+          <input type="radio" id="sem-urgencia" name="prazo" value="sem-urgencia">
+          <label for="sem-urgencia">Sem urgência</label>
+        </div>
+      </section>
+
+    </form>
+  </main>
+
+  <!-- Rodapé com os botões de rotas (vazios para você preencher) -->
+  <footer>
+    <nav class="acoes">
+      <a href="/preferencias1" class="btn btn-voltar">Voltar</a>
+      <a href="/home-c" class="btn btn-publicar">Pular e publicar</a>
+    </nav>
+  </footer>
+
+</body>
+</html>

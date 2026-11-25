@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Perfil e Idioma</title>
+
+  <!-- Fonte Dongle -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Dongle:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- CSS externo -->
+  <link rel="stylesheet" href="css/style_habilidades2f.css">
+</head>
+<body>
+
+  <!-- Cabeçalho com a logo -->
+  <header>
+    <a href="#">
+      <img src="img/logo-codework.png" href="/" alt="Logo CW" class="logo-img">
+    </a>
+  </header>
+
+  <!-- Conteúdo principal -->
+  <main>
+
+    <!-- Indicador de etapas (1 e 2) -->
+    <section class="etapas" aria-label="Progresso">
+      <div class="circulo">1</div>
+      <div class="circulo ativo">2</div>
+    </section>
+
+    <!-- Identificação do usuário -->
+    <section class="usuario">
+      <h1>André Moreira</h1>
+      <img src="img/fotofreela.png" alt="Foto de André Moreira" class="foto-perfil">
+      <p class="cargo">Mobile Developer</p>
+    </section>
+
+    <form>
+
+      <!-- Seção Perfil -->
+      <section class="bloco-secao">
+        <h2>Perfil</h2>
+
+        <label for="whatsapp" class="pergunta-label">Qual é seu número de WhatsApp?</label>
+        <div class="campo-whatsapp">
+          <img src="img/brasil.png" alt="Bandeira do Brasil" class="bandeira-brasil">
+          <span class="seta-ddi">⌄</span>
+          <span class="ddi">+55</span>
+          <input type="tel" id="whatsapp" placeholder="(11) 99999-9999">
+        </div>
+      </section>
+
+      <!-- Seção Idioma -->
+      <section class="bloco-secao sem-borda">
+        <h2>Idioma</h2>
+
+        <label for="idioma-nativo" class="pergunta-label">Qual é sua língua materna/nativa?</label>
+        <div class="campo-select">
+          <select id="idioma-nativo" name="idioma-nativo">
+            <option value="portugues" selected>Português</option>
+            <option value="ingles">Inglês</option>
+            <option value="espanhol">Espanhol</option>
+          </select>
+          <span class="seta-select">⌄</span>
+        </div>
+
+        <p class="pergunta-label">Com quais outros idiomas você trabalha?</p>
+        <!-- Rota vazia para você preencher -->
+        <a href="#" class="link-outros-idiomas">Inclua outros idiomas que você domina</a>
+      </section>
+
+    </form>
+  </main>
+
+  <!-- Rodapé com botões de rota vazios -->
+  <footer>
+    <nav class="acoes">
+      <a href="/habilidade-1" class="btn btn-voltar">Voltar</a>
+      <a href="/home-f" class="btn btn-continuar">Continuar</a>
+    </nav>
+  </footer>
+
+</body>
+</html>

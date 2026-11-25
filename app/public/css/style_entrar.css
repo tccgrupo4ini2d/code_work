@@ -1,0 +1,244 @@
+/* Paleta de cores do projeto */
+:root {
+  --azul-escuro: #1E527D;
+  --azul-destaque: #4599CD;
+  --azul-medio: #4386AF;
+  --azul-claro: #6DA9CB;
+  --cinza-borda: #8E959E;
+  --fundo-pagina: #FFFFFF;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Dongle', sans-serif;
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  background-color: var(--fundo-pagina);
+  color: #111111;
+  font-size: 24px;
+}
+
+.pagina-login {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Cabeçalho */
+header {
+  width: 100%;
+  padding: 12px 20px;
+  border-bottom: 1px solid var(--azul-claro);
+  background-color: #FFFFFF;
+}
+
+.link-logo {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.logo-img {
+  height: 36px;
+  width: auto;
+  display: block;
+}
+
+/* Área principal */
+main {
+  flex: 1;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 28px 18px 40px;
+}
+
+.caixa-login {
+  width: 100%;
+  max-width: 420px;
+}
+
+.topo-login {
+  text-align: center;
+  margin-bottom: 22px;
+}
+
+.topo-login h1 {
+  font-size: clamp(38px, 6vw, 48px);
+  font-weight: 700;
+  line-height: 1.05;
+  color: #111111;
+}
+
+.topo-login p {
+  font-size: 26px;
+  line-height: 1.1;
+  color: #111111;
+}
+
+/* Campos editáveis */
+label {
+  display: block;
+  color: var(--azul-escuro);
+  font-size: 26px;
+  font-weight: 700;
+  line-height: 1.1;
+  margin-top: 14px;
+  margin-bottom: 6px;
+}
+
+.campo-icone {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.icone-campo {
+  position: absolute;
+  left: 14px;
+  width: 22px;
+  height: 22px;
+  object-fit: contain;
+  pointer-events: none;
+}
+
+.campo-icone input {
+  width: 100%;
+  padding: 6px 14px 6px 44px;
+  border: 1.5px solid var(--cinza-borda);
+  border-radius: 14px;
+  font-size: 24px;
+  line-height: 1.3;
+  color: #111111;
+  background-color: #FFFFFF;
+  outline: none;
+}
+
+.campo-icone input::placeholder {
+  color: #9AA0A6;
+}
+
+.campo-icone input:focus {
+  border-color: var(--azul-destaque);
+}
+
+/* Link "Crie já" */
+.cadastro-aviso {
+  margin-top: 8px;
+  font-size: 22px;
+  line-height: 1.2;
+  color: #111111;
+}
+
+.cadastro-aviso a {
+  color: var(--azul-destaque);
+  text-decoration: none;
+  font-weight: 700;
+}
+
+/* Botão Entrar */
+.btn-entrar {
+  width: 100%;
+  margin-top: 22px;
+  padding: 6px 20px;
+  border: none;
+  border-radius: 16px;
+  background-color: var(--azul-escuro);
+  color: #FFFFFF;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 1.25;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.btn-entrar:hover {
+  background-color: var(--azul-medio);
+}
+
+/* Divisor "ou" */
+.divisor {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin: 28px 0 22px;
+}
+
+.divisor span {
+  flex: 1;
+  height: 1px;
+  background-color: #222222;
+}
+
+.divisor p {
+  font-size: 24px;
+  line-height: 1;
+  color: #111111;
+}
+
+/* Botões de redes sociais */
+.redes-sociais {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.btn-rede {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 6px 18px;
+  border-radius: 26px;
+  text-decoration: none;
+  font-size: 26px;
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+.icone-rede {
+  position: absolute;
+  left: 22px;
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+}
+
+.btn-rede.google {
+  background-color: #FFFFFF;
+  color: #111111;
+  border: 1.5px solid var(--azul-destaque);
+}
+
+.btn-rede.facebook {
+  background-color: #3B5998;
+  color: #FFFFFF;
+}
+
+.btn-rede.apple {
+  background-color: #000000;
+  color: #FFFFFF;
+}
+
+/* Responsividade quando a tela fecha/diminui na largura ou altura */
+@media (max-width: 600px), (max-height: 550px) {
+  main {
+    padding: 16px 14px 24px;
+  }
+
+  .topo-login {
+    margin-bottom: 12px;
+  }
+
+  .divisor {
+    margin: 18px 0 14px;
+  }
+}

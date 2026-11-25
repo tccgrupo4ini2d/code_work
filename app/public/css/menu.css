@@ -1,0 +1,156 @@
+/* Paleta de cores do projeto */
+:root {
+  --azul-escuro: #1E527D;
+  --azul-medio: #4386AF;
+  --azul-claro: #6DA9CB;
+  --vermelho-sair: #D9415E;
+  --cinza-perfil: #D9D9D9;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Dongle', sans-serif;
+}
+
+body {
+  background-color: #FFFFFF;
+  color: #111111;
+  min-height: 100vh;
+  font-size: 26px;
+}
+
+/* Container responsivo */
+.tela-menu {
+  width: 100%;
+  max-width: 768px;
+  min-height: 100vh;
+  margin: 0 auto;
+  background-color: #FFFFFF;
+}
+
+/* Cabeçalho */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 18px;
+  border-bottom: 1px solid var(--azul-claro);
+}
+
+.link-logo {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.logo-img {
+  height: 36px;
+  width: auto;
+  min-width: 36px;
+  display: block;
+  object-fit: contain;
+}
+
+/* Ícones do canto superior direito */
+.icones-topo {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.btn-icone {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+
+.icone-nav {
+  width: 24px;
+  height: 24px;
+  display: block;
+  object-fit: contain;
+}
+
+/* Círculo cinza do perfil igual ao da foto */
+.btn-perfil {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: var(--cinza-perfil);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  text-decoration: none;
+}
+
+.icone-perfil {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Lista de links do menu */
+.lista-menu {
+  list-style: none;
+}
+
+.lista-menu li {
+  border-bottom: 1px solid var(--azul-claro);
+}
+
+.lista-menu li:last-child {
+  border-bottom: none;
+}
+
+.lista-menu a {
+  display: block;
+  width: 100%;
+  padding: 14px 20px;
+  text-decoration: none;
+  color: #111111;
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 1.1;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.lista-menu a:hover {
+  background-color: #F4F9FC;
+  color: var(--azul-escuro);
+}
+
+/* Botão Sair em vermelho/rosado igual à imagem */
+.lista-menu a.link-sair {
+  color: var(--vermelho-sair);
+}
+
+.lista-menu a.link-sair:hover {
+  background-color: #FFF5F7;
+  color: #B82E49;
+}
+
+/* Ajuste para telas maiores (tablets e computadores) */
+@media (min-width: 768px) {
+  body {
+    background-color: #F4F6F8;
+  }
+
+  .tela-menu {
+    border-left: 1px solid #E2E8F0;
+    border-right: 1px solid #E2E8F0;
+  }
+
+  header {
+    padding: 16px 28px;
+  }
+
+  .lista-menu a {
+    padding: 16px 28px;
+    font-size: 30px;
+  }
+}

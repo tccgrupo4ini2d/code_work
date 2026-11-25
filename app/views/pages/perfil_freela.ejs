@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Perfil - André Moreira</title>
+
+  <!-- Fonte Dongle -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Dongle:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- CSS externo da página de perfil -->
+  <link rel="stylesheet" href="css/perfil_freela.css">
+</head>
+<body>
+
+  <!-- Cabeçalho com a logo -->
+  <header>
+    <a href="/home-f" class="logo-link">
+      <img src="img/logo-codework.png" alt="Logo CW" class="logo-img">
+    </a>
+  </header>
+
+  <!-- Conteúdo principal -->
+  <main>
+
+    <!-- Card 1: Informações principais do usuário -->
+    <section class="card perfil-topo" aria-label="Informações do perfil">
+      <img src="img/fotofreela.png" alt="Foto de André Moreira" class="foto-perfil">
+
+      <div class="nome-linha">
+        <h1>André Moreira</h1>
+        <button type="button" class="btn-icone" aria-label="Editar nome">
+          <img src="icones/lapis.svg" alt="" class="icone-acao">
+        </button>
+      </div>
+
+      <p class="cargo-titulo">Mobile Developer</p>
+
+      <!-- Avaliação em estrelas -->
+      <div class="estrelas" aria-label="Avaliação 0 de 5 estrelas">
+        <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+      </div>
+
+      <hr class="divisor-card">
+
+      <div class="bloco-propostas">
+        <button type="button" class="btn-icone" aria-label="Editar propostas">
+          <img src="icones/lapis.svg" alt="" class="icone-acao">
+        </button>
+        <p class="aviso-propostas">*É necessário enviar propostas</p>
+      </div>
+
+      <hr class="divisor-card">
+
+      <p class="resumo-experiencia">Freelancer experiente em Programação</p>
+
+      <!-- Chaves de alternância (toggle) -->
+      <div class="config-switches">
+        <div class="switch-item">
+          <label for="perfil-agencia">Perfil da Agência</label>
+          <input type="checkbox" id="perfil-agencia" class="switch-input">
+          <img src="icones/interrogacao.svg" alt="Ajuda sobre Perfil da Agência" class="icone-ajuda">
+        </div>
+
+        <div class="switch-item">
+          <label for="perfil-publico">Perfil público</label>
+          <input type="checkbox" id="perfil-publico" class="switch-input" checked>
+          <img src="icones/interrogacao.svg" alt="Ajuda sobre Perfil público" class="icone-ajuda">
+        </div>
+      </div>
+
+      <!-- Rota vazia para você preencher -->
+      <a href="/habilidades1" class="btn-habilidades-outline">Selecione suas 3 habilidades principais</a>
+    </section>
+
+    <!-- Card 2: Sobre mim -->
+    <section class="card sobre-mim">
+      <div class="titulo-com-ajuda">
+        <h2>Sobre mim</h2>
+        <img src="icones/interrogacao.svg" alt="Ajuda sobre mim" class="icone-ajuda">
+      </div>
+
+      <textarea id="sobre-mim-texto" placeholder="Conte mais sobre você.-"></textarea>
+    </section>
+
+    <!-- Habilidades e Histórico Profissional -->
+    <section class="secao-habilidades">
+      <h2>Habilidades:</h2>
+
+      <!-- Rota vazia para adicionar habilidades -->
+      <a href="#" class="btn-add-habilidades">Adicionar habilidades</a>
+
+      <div class="campo-selecao">
+        <input type="text" placeholder="" aria-label="Selecionar habilidade">
+        <span class="seta-baixo">⌄</span>
+      </div>
+
+      <!-- Formulário de Histórico Profissional -->
+      <article class="card historico-card">
+        <h3>Histórico Profissional</h3>
+
+        <form>
+          <label for="cargo">Cargo</label>
+          <input type="text" id="cargo" placeholder="Exemplo: Pleno front - end">
+
+          <label for="empresa">Nome da empresa</label>
+          <input type="text" id="empresa" placeholder="Exemplo: CodeWork">
+
+          <label for="data-inicio">Data de Início</label>
+          <input type="date" id="data-inicio">
+
+          <label for="data-termino">Data de Término</label>
+          <input type="date" id="data-termino">
+
+          <label for="funcoes">Descreva as funções do cargo</label>
+          <textarea id="funcoes" class="textarea-curto"></textarea>
+
+          <div class="acoes-form">
+            <!-- Rota vazia para cancelar -->
+            <a href="#" class="btn-cancelar">Cancelar</a>
+            <button type="submit" class="btn-salvar">Salvar</button>
+          </div>
+        </form>
+      </article>
+    </section>
+
+    <!-- Card 3: Idiomas -->
+    <section class="card card-item-linha">
+      <div>
+        <h2>Idiomas</h2>
+        <p class="subtexto-card">Portuguê Nativo e bilíngue</p>
+      </div>
+
+      <button type="button" class="btn-icone" aria-label="Editar idiomas">
+        <img src="icones/lapis.svg" alt="" class="icone-acao">
+      </button>
+    </section>
+
+    <!-- Card 4: Certificações -->
+    <section class="card card-item-linha">
+      <h2>Certificações</h2>
+
+      <button type="button" class="btn-icone" aria-label="Editar certificações">
+        <img src="icones/lapis.svg" alt="" class="icone-acao">
+      </button>
+    </section>
+
+    <!-- Card 5: GitHub -->
+    <section class="card card-item-linha">
+      <div class="titulo-github">
+        <h2>Git Hub</h2>
+        <img src="icones/github.svg" alt="Ícone GitHub" class="icone-github">
+      </div>
+
+      <button type="button" class="btn-icone" aria-label="Editar GitHub">
+        <img src="icones/lapis.svg" alt="" class="icone-acao">
+      </button>
+    </section>
+
+  </main>
+
+</body>
+</html>

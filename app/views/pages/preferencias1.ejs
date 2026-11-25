@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Criação do Projeto</title>
+
+  <!-- Fonte Dongle -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Dongle:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- CSS externo -->
+  <link rel="stylesheet" href="css/style_preferencia1.css">
+</head>
+<body>
+
+  <div class="pagina-projeto">
+
+    <!-- Cabeçalho com logo -->
+    <header>
+      <a href="/" class="link-logo">
+        <img src="img/logo-codework.png" alt="Logo CW" class="logo-img">
+      </a>
+    </header>
+
+    <!-- Conteúdo principal -->
+    <main>
+
+      <!-- Etapa 1 -->
+      <section class="etapas" aria-label="Progresso">
+        <div class="passo ativo">
+          <div class="circulo">1</div>
+          <span>Prévia</span>
+        </div>
+        <div class="linha-etapa"></div>
+        <div class="passo">
+          <div class="circulo"></div>
+          <span>&nbsp;</span>
+        </div>
+      </section>
+
+      <form>
+
+        <!-- Título editável -->
+        <section class="bloco-campo">
+          <label for="titulo-projeto" class="label-azul">Digite o título:</label>
+          <div class="campo-icone">
+            <img src="icones/email" alt="" class="icone-campo">
+            <input type="text" id="titulo-projeto" name="titulo" placeholder="Titulo">
+          </div>
+        </section>
+
+        <!-- Descrição editável -->
+        <section class="bloco-campo">
+          <label for="descricao-projeto" class="label-azul">Descrição:</label>
+          <textarea id="descricao-projeto" name="descricao"></textarea>
+        </section>
+
+        <!-- Escolha única: Por Hora ou Por Projeto -->
+        <section class="bloco-campo" aria-label="Tipo de orçamento">
+          <h2 class="label-azul">Escolha como você quer calcular o seu orçamento</h2>
+
+          <div class="opcoes-orcamento">
+            <input type="radio" id="por-hora" name="orcamento" value="por-hora">
+            <label for="por-hora" class="card-orcamento">
+              <span class="linha-titulo-card">
+                <img src="icones/livro.svg" alt="" class="icone-card">
+                <strong>Por Hora</strong>
+              </span>
+              <span>Recomendado para tarefas contínuas, frequentes ou com projetos em andamento.</span>
+            </label>
+
+            <input type="radio" id="por-projeto" name="orcamento" value="por-projeto">
+            <label for="por-projeto" class="card-orcamento">
+              <span class="linha-titulo-card">
+                <img src="" alt="" class="icone-card">
+                <strong>Por Projeto</strong>
+              </span>
+              <span>Recomendado para tarefas com início e final definidas.</span>
+            </label>
+          </div>
+        </section>
+
+        <!-- Tamanho ou espaço do projeto -->
+        <section class="bloco-campo">
+          <label for="tamanho-projeto" class="label-azul">Tamanho ou espaço do projeto</label>
+          <div class="campo-select">
+            <select id="tamanho-projeto" name="tamanho">
+              <option value="" selected disabled>Selecione o tamanho do projeto</option>
+              <option value="pequeno">Pequeno</option>
+              <option value="medio">Médio</option>
+              <option value="grande">Grande</option>
+            </select>
+            <span class="seta-select">⌄</span>
+          </div>
+        </section>
+
+        <!-- Escolha seu orçamento estimado -->
+        <section class="bloco-campo">
+          <label for="orcamento-estimado" class="label-azul">Escolha seu orçamento estimado</label>
+          <div class="campo-select">
+            <select id="orcamento-estimado" name="orcamento-estimado">
+              <option value="" selected disabled>Selecione o orçamento</option>
+              <option value="ate-1000">Até R$ 1.000</option>
+              <option value="1000-5000">R$ 1.000 a R$ 5.000</option>
+              <option value="acima-5000">Acima de R$ 5.000</option>
+            </select>
+            <span class="seta-select">⌄</span>
+          </div>
+        </section>
+
+        <!-- Sugestão e habilidades -->
+        <section class="bloco-campo">
+          <p class="texto-sugestao">
+            Sugerimos algumas habilidades. Você pode editar ou adicionar outras da lista para encontar freelancers com experiência na área.
+          </p>
+
+          <label for="habilidades-projeto" class="label-azul">Habilidades</label>
+          <div class="campo-select">
+            <select id="habilidades-projeto" name="habilidades">
+              <option value="" selected disabled>Selecione algumas habilidades</option>
+              <option value="frontend">Front-end</option>
+              <option value="backend">Back-end</option>
+              <option value="mobile">Mobile</option>
+              <option value="design">UI/UX Design</option>
+            </select>
+            <span class="seta-select">⌄</span>
+          </div>
+        </section>
+
+      </form>
+    </main>
+
+    <!-- Rodapé com botão Continuar (rota vazia) -->
+    <footer>
+      <div class="rodape-acao">
+        <a href="/preferencias2" class="btn-continuar">Continuar</a>
+      </div>
+    </footer>
+
+  </div>
+
+</body>
+</html>

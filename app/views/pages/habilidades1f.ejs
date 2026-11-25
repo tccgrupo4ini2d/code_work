@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Áreas e Habilidades</title>
+
+  <!-- Fonte Dongle -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Dongle:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- CSS externo -->
+  <link rel="stylesheet" href="css/style_habilidades1f.css">
+</head>
+<body>
+
+  <!-- Cabeçalho com a logo -->
+  <header>
+    <a href="#">
+      <img src="img/logo-codework.png" href="/" alt="Logo CW" class="logo-img">
+    </a>
+  </header>
+
+  <!-- Conteúdo principal -->
+  <main>
+
+    <!-- Indicador de etapas (1 ativo e 2 inativo) -->
+    <section class="etapas" aria-label="Progresso">
+      <div class="circulo ativo">1</div>
+      <div class="circulo">2</div>
+    </section>
+
+    <!-- Título principal -->
+    <section class="intro">
+      <h1>Conte-nos um pouco mais sobre você...</h1>
+    </section>
+
+    <form>
+
+      <!-- Pergunta 1: Pode marcar quantas quiser (inclusive nenhuma) -->
+      <section class="pergunta">
+        <img src="icones/notebook.svg" alt="" class="icone-secao">
+        <h2>Em qual área você se desempenha em TI e programação?</h2>
+
+        <div class="opcoes">
+          <input type="checkbox" id="backend" name="area" value="backend">
+          <label for="backend">Back-end Developer</label>
+
+          <input type="checkbox" id="frontend" name="area" value="frontend">
+          <label for="frontend">Front-end Developer</label>
+
+          <input type="checkbox" id="fullstack" name="area" value="fullstack">
+          <label for="fullstack">Full Stack Developer</label>
+
+          <input type="checkbox" id="mobile" name="area" value="mobile">
+          <label for="mobile">Mobile Developer</label>
+
+          <input type="checkbox" id="qa" name="area" value="qa">
+          <label for="qa">QA Automation</label>
+
+          <input type="checkbox" id="data" name="area" value="data">
+          <label for="data">Data Engineer</label>
+
+          <input type="checkbox" id="outra-area" name="area" value="outra">
+          <label for="outra-area" class="opcao-outra">
+            <span>Outra</span>
+            <img src="icones/mais.svg" alt="" class="icone-mais">
+          </label>
+        </div>
+      </section>
+
+      <!-- Pergunta 2: Pode marcar no máximo 3 habilidades -->
+      <section class="pergunta sem-borda">
+        <img src="icones/estrela.svg" alt="" class="icone-secao">
+        <h2>Quais são suas 3 principais habilidades?</h2>
+
+        <div class="opcoes">
+          <input type="checkbox" id="wordpress" name="habilidade" value="wordpress">
+          <label for="wordpress">WordPress</label>
+
+          <input type="checkbox" id="python" name="habilidade" value="python">
+          <label for="python">Python</label>
+
+          <input type="checkbox" id="typescript" name="habilidade" value="typescript">
+          <label for="typescript">Typescript</label>
+
+          <input type="checkbox" id="nodejs" name="habilidade" value="nodejs">
+          <label for="nodejs">Node.js</label>
+
+          <input type="checkbox" id="reactjs" name="habilidade" value="reactjs">
+          <label for="reactjs">React.js</label>
+
+          <input type="checkbox" id="outra-hab" name="habilidade" value="outra">
+          <label for="outra-hab" class="opcao-outra">
+            <span>Outra</span>
+            <img src="icones/mais.svg" alt="" class="icone-mais">
+          </label>
+        </div>
+      </section>
+
+    </form>
+  </main>
+
+  <!-- Rodapé com os botões de rotas vazias -->
+  <footer>
+    <nav class="acoes">
+      <a href="/" class="btn btn-voltar">Voltar</a>
+      <a href="/habilidades2" class="btn btn-continuar">Continuar</a>
+    </nav>
+  </footer>
+
+  <!-- Script simples: impede selecionar mais de 3 habilidades -->
+  <script>
+    const habilidades = document.querySelectorAll('input[name="habilidade"]');
+
+    habilidades.forEach(item => {
+      item.addEventListener('change', () => {
+        const marcadas = document.querySelectorAll('input[name="habilidade"]:checked');
+        if (marcadas.length > 3) {
+          item.checked = false;
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>

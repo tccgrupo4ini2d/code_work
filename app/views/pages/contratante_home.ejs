@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Criação de um E-commerce para comercio local</title>
+
+  <!-- Fonte Dongle -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Dongle:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- CSS externo -->
+  <link rel="stylesheet" href="css/style_contratantehome.css">
+</head>
+<body>
+
+  <div class="pagina">
+
+    <!-- Cabeçalho com logo e ícones do topo -->
+    <header>
+      <a href="" class="link-logo">
+        <img src="img/logo-codework.png" href="/home-c" alt="Logo CW" class="logo-img">
+      </a>
+
+      <div class="icones-topo">
+        <a href="" class="btn-icone" aria-label="Pesquisar">
+          <img src="icones/Search.svg" alt="Pesquisar" class="icone-nav">
+        </a>
+
+        <a href="" class="btn-icone" aria-label="Notificações">
+          <img src="icones/garden_notification-fill-16.svg" alt="Notificações" class="icone-nav">
+        </a>
+
+        <a href="/perfil-c" class="btn-perfil" aria-label="Perfil">
+          <img src="img/contratante.svg" alt="Foto de perfil" class="icone-perfil">
+        </a>
+      </div>
+    </header>
+
+    <!-- Conteúdo principal -->
+    <main>
+
+      <!-- Título da página -->
+      <section class="cabecalho-projeto">
+        <h1>Criação de um E-commerce para comercio local</h1>
+
+        <!-- Alternância entre Propostas e Projetos -->
+        <div class="abas-switch" role="tablist" aria-label="Alternar entre Propostas e Projetos">
+          <button type="button" class="aba ativa" id="btn-propostas" data-alvo="painel-propostas">
+            Propostas
+          </button>
+          <button type="button" class="aba" id="btn-projetos" data-alvo="painel-projetos">
+            Projetos
+          </button>
+        </div>
+      </section>
+
+      <!-- Barra de filtro -->
+      <section class="barra-filtros" aria-label="Filtros">
+        <button type="button" class="btn-filtro" aria-label="Filtrar">
+          <img src="icones/Filter.svg" alt="Filtro" class="icone-filtro">
+        </button>
+
+        <div class="pills-filtro">
+          <button type="button" class="pill ativo" data-filtro="todas">Todas</button>
+          <button type="button" class="pill" id="filtro-secundario" data-filtro="secundario">Aceitos</button>
+        </div>
+      </section>
+
+      <!-- PAINEL 1: Propostas (visível por padrão) -->
+      <section id="painel-propostas" class="painel ativo" aria-label="Propostas">
+        <article class="card-proposta">
+          <div class="topo-proposta">
+            <div class="coluna-freelancer">
+              <img src="img/fotofreela.png" alt="Foto de André Moreira" class="foto-freelancer">
+              <button type="button" class="btn-ver-perfil" id="btn-ver-perfil">
+                Ver perfil
+              </button>
+            </div>
+
+            <div class="info-proposta">
+              <div class="estrelas-proposta" aria-label="Avaliação 5 de 5 estrelas">
+                <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+              </div>
+
+              <div class="nome-verificado">
+                <h2>André Moreira</h2>
+                <img src="icones/verificado.svg" alt="Verificado" class="icone-verificado">
+              </div>
+
+              <p class="tag-proposta">Proposta</p>
+
+              <div class="valores-proposta">
+                <span>100 R$/ Hr</span>
+                <span>22 Horas</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="acoes-proposta">
+            <button type="button" class="btn-aceitar" id="btn-aceitar">Aceitar</button>
+            <button type="button" class="btn-recusar" id="btn-recusar">Recusar</button>
+          </div>
+        </article>
+      </section>
+
+      <!-- PAINEL 2: Projetos (continua igual ao anterior) -->
+      <section id="painel-projetos" class="painel" aria-label="Projetos">
+        <article class="card-projeto">
+          <h2>E-commerce</h2>
+          <p class="descricao-projeto">
+            E-commerce para meu comércio local de vendas de componentes eletronicos
+          </p>
+
+          <div class="rodape-projeto">
+            <div class="caixa-orcamento">
+              <span class="rotulo-orcamento">Orçamento:</span>
+              <strong class="valor-orcamento"><span>BRL:</span> 8.000,00</strong>
+            </div>
+
+            <div class="caixa-status">
+              <span>Em Andamento</span>
+            </div>
+          </div>
+        </article>
+      </section>
+
+      <!-- Botão flutuante do menu -->
+      <a href="/menu" class="btn-menu-flutuante" aria-label="Abrir menu">
+        <img src="icones/Menu.svg" alt="Menu" class="icone-menu-flutuante">
+      </a>
+
+    </main>
+  </div>
+
+  <!-- Modal sobreposto: Perfil completo ao clicar em "Ver perfil" -->
+  <div class="modal-perfil-overlay" id="modal-perfil" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Perfil de André Moreira">
+    <div class="modal-perfil-box">
+      <button type="button" class="btn-fechar-modal" id="btn-fechar-modal" aria-label="Fechar perfil">
+        &times;
+      </button>
+
+      <img src="img/fotofreela.png" alt="Foto de André Moreira" class="modal-foto-perfil">
+
+      <div class="modal-nome-linha">
+        <h2>André Moreira</h2>
+        <img src="icones/verificado.svg" alt="Verificado" class="icone-verificado">
+      </div>
+
+      <div class="estrelas-modal" aria-label="Avaliação 5 de 5 estrelas">
+        <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+      </div>
+
+      <section class="modal-secao">
+        <h3>Sobre ele</h3>
+        <div class="caixa-sobre-ele">
+          <p>
+            Olá! Sou André Moreira, desenvolvedor web com 6 anos de experiência na área de tecnologia. Ao longo da minha trajetória, já atuei em diferentes projetos e empresas — incluindo alguns anos no Mercado Livre — construindo soluções práticas, funcionais e bem estruturadas para a web.
+          </p>
+        </div>
+      </section>
+
+      <section class="modal-secao">
+        <h3 class="titulo-cargos">Cargos:</h3>
+        <div class="card-cargo">
+          <p><strong>Empresa:</strong> Mercado livre</p>
+          <p><strong>Cargo:</strong> Dev Fullstack</p>
+          <p><strong>Quando:</strong> 11/23 até 07/25</p>
+        </div>
+      </section>
+
+      <a href="https://github.com" class="card-github-modal">
+        <span>Git Hub</span>
+        <img src="icones/github.svg" alt="GitHub" class="icone-github-modal">
+      </a>
+
+      <section class="modal-secao">
+        <h3 class="titulo-avaliacoes">Avaliações</h3>
+        <article class="card-avaliacao">
+          <div class="topo-avaliacao">
+            <div class="estrelas-avaliacao" aria-label="Avaliação 5 de 5 estrelas">
+              <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+            </div>
+            <span class="autor-avaliacao">Lucas Mendes</span>
+            <img src="img/leo.svg" alt="Foto de Lucas Mendes" class="foto-avaliacao">
+          </div>
+
+          <p class="servico-avaliacao">Serviço: Site institucional</p>
+          <p class="texto-avaliacao">
+            Contratei ele para criar o site da minha empresa e o resultado ficou muito bom. O projeto foi entregue dentro do prazo, o site ficou responsivo e ele entendeu exatamente o que eu precisava. Recomendo bastante!
+          </p>
+        </article>
+      </section>
+    </div>
+  </div>
+
+  <script src="js/script_contratantehome.js" defer></script>
+</body>
+</html>
