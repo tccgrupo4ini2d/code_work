@@ -12,6 +12,29 @@
   <link href="https://fonts.googleapis.com/css2?family=Dongle:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
+    <% 
+
+    let erroValidacao = {"email":"", "completo":"", "senha":"", "cpf":""};
+    let msgErro = {"email":"", "completo":"", "senha":"", "cpf":""};
+    if(erros) {
+        erros.errors.forEach(function(erro){
+    if (erro.path == "email"){
+        erroValidacao.email = "erro",
+        msgErro.email = erro.msg
+    }if (erro.path == "completo"){
+        erroValidacao.completo = "erro",
+        msgErro.nome = erro.msg
+    }if (erro.path == "senha"){
+        erroValidacao.senha = "erro",
+        msgErro.senha = erro.msg
+    }if (erro.path == "cpf"){
+        erroValidacao.cpf = "erro",
+        msgErro.cpf = erro.msg
+    }
+})
+}
+
+%>
 
     <div class="cadastro">
 
@@ -25,24 +48,27 @@
         <h2>Cadastro: <span>Freelancer</span></h2>
         <p>Seja bem-vindo!</p>
 
-      <form>
+      <form action="/cadastro-freelancer", method="post">
     <label>Email:</label>
     <div class="campo">
         <img src="icones/email.svg" alt="">
-        <input type="email" placeholder="Email">
+        <input type="email" placeholder="Email" name="email">
     </div>
+    <span><%= msgErro.email %></span>
 
     <label>Crie sua senha:</label>
     <div class="campo">
         <img src="icones/senha.svg" alt="">
-        <input type="password" placeholder="Senha">
+        <input type="password" placeholder="Senha" name="senha">
     </div>
+    <span><%= msgErro.senha %></span>
 
     <label>Nome completo:</label>
     <div class="campo">
         <img src="icones/usuario.svg" alt="">
-        <input type="text" placeholder="Nome completo">
+        <input type="text" placeholder="Nome completo" name="completo">
     </div>
+    <span><%= msgErro.completo %></span>
 
     <label>Data de nascimento:</label>
     <div class="campo">
@@ -53,10 +79,11 @@
     <label>CPF ou CNPJ:</label>
     <div class="campo">
         <img src="icones/cpf.svg" alt="">
-        <input type="text" placeholder="CPF ou CNPJ">
+        <input type="text" placeholder="CPF ou CNPJ" name="cpf">
     </div>
+    <span><%= msgErro.cpf %></span>
 
-   <a class="cadastrar" href="/habilidades1">Cadastrar</a>
+   <button type="submit">Cadastrar</button>
 </form>
 
         <p class="ou">ou</p>
