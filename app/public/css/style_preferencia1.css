@@ -1,0 +1,341 @@
+/* Paleta de cores do projeto */
+:root {
+  --azul-escuro: #1E527D;
+  --azul-destaque: #4599CD;
+  --azul-medio: #4386AF;
+  --azul-claro: #6DA9CB;
+  --azul-botao-rodape: #5C6BFF;
+  --cinza-borda: #7A7F85;
+  --cinza-circulo: #CCCCCC;
+  --fundo-pagina: #FFFFFF;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Dongle', sans-serif;
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  background-color: var(--fundo-pagina);
+  color: #111111;
+  font-size: 24px;
+}
+
+.pagina-projeto {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Cabeçalho */
+header {
+  width: 100%;
+  padding: 12px 20px;
+  border-bottom: 1px solid var(--azul-claro);
+  background-color: #FFFFFF;
+}
+
+.link-logo {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.logo-img {
+  height: 36px;
+  width: auto;
+  display: block;
+}
+
+/* Área principal */
+main {
+  flex: 1;
+  width: 100%;
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 20px 18px 36px;
+}
+
+/* Etapas */
+.etapas {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  margin-bottom: 24px;
+}
+
+.passo {
+  width: 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.circulo {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background-color: var(--cinza-circulo);
+  color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.passo.ativo .circulo {
+  background-color: var(--azul-destaque);
+}
+
+.passo span {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.1;
+  margin-top: 4px;
+}
+
+.linha-etapa {
+  width: 100px;
+  height: 2px;
+  background-color: var(--cinza-circulo);
+  margin-top: 25px;
+}
+
+/* Blocos de formulário */
+.bloco-campo {
+  margin-bottom: 22px;
+}
+
+.label-azul {
+  display: block;
+  color: var(--azul-escuro);
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 1.1;
+  margin-bottom: 10px;
+}
+
+.campo-icone {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.icone-campo {
+  position: absolute;
+  left: 14px;
+  width: 22px;
+  height: 22px;
+  object-fit: contain;
+  pointer-events: none;
+}
+
+.campo-icone input {
+  width: 100%;
+  padding: 6px 14px 6px 44px;
+  border: 1.5px solid var(--cinza-borda);
+  border-radius: 14px;
+  font-size: 24px;
+  line-height: 1.3;
+  color: #111111;
+  background-color: #FFFFFF;
+  outline: none;
+}
+
+.campo-icone input::placeholder {
+  color: #9AA0A6;
+}
+
+.campo-icone input:focus {
+  border-color: var(--azul-destaque);
+}
+
+textarea {
+  width: 100%;
+  min-height: 220px;
+  padding: 12px 14px;
+  border: 1.5px solid var(--azul-claro);
+  border-radius: 16px;
+  font-size: 24px;
+  line-height: 1.25;
+  color: #111111;
+  background-color: #FFFFFF;
+  resize: vertical;
+  outline: none;
+}
+
+textarea:focus {
+  border-color: var(--azul-destaque);
+}
+
+/* Seleção única: Por Hora ou Por Projeto */
+.opcoes-orcamento {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.opcoes-orcamento input[type="radio"] {
+  display: none;
+}
+
+.card-orcamento {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 14px 16px;
+  border: 1.5px solid var(--azul-claro);
+  border-radius: 16px;
+  background-color: #FFFFFF;
+  cursor: pointer;
+  transition: background-color 0.2s, border-color 0.2s, color 0.2s;
+}
+
+.card-orcamento:hover {
+  border-color: var(--azul-destaque);
+}
+
+.linha-titulo-card {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.icone-card {
+  width: 22px;
+  height: 22px;
+  object-fit: contain;
+}
+
+.card-orcamento strong {
+  font-size: 26px;
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+.card-orcamento span:last-child {
+  font-size: 24px;
+  line-height: 1.15;
+  color: #111111;
+}
+
+/* Quando selecionado: só um fica ativo e o outro volta ao normal */
+.opcoes-orcamento input[type="radio"]:checked + .card-orcamento {
+  background-color: var(--azul-escuro);
+  border-color: var(--azul-escuro);
+  color: #FFFFFF;
+}
+
+.opcoes-orcamento input[type="radio"]:checked + .card-orcamento span:last-child {
+  color: #FFFFFF;
+}
+
+/* Campos select */
+.campo-select {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.campo-select select {
+  width: 100%;
+  appearance: none;
+  -webkit-appearance: none;
+  padding: 6px 40px 6px 14px;
+  border: none;
+  border-radius: 14px;
+  background-color: #FFFFFF;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.14);
+  font-size: 24px;
+  line-height: 1.3;
+  color: #9AA0A6;
+  cursor: pointer;
+  outline: none;
+}
+
+.campo-select select:valid {
+  color: #111111;
+}
+
+.seta-select {
+  position: absolute;
+  right: 14px;
+  font-size: 26px;
+  color: #C8CFD6;
+  pointer-events: none;
+}
+
+/* Texto de sugestão */
+.texto-sugestao {
+  font-size: 25px;
+  font-weight: 700;
+  line-height: 1.1;
+  color: #111111;
+  margin-bottom: 16px;
+}
+
+/* Rodapé */
+footer {
+  width: 100%;
+  padding: 16px 20px;
+  border-top: 1px solid var(--azul-claro);
+  background-color: #FFFFFF;
+}
+
+.rodape-acao {
+  max-width: 720px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+}
+
+.btn-continuar {
+  text-decoration: none;
+  color: var(--azul-botao-rodape);
+  border: 1px solid #C9CEFF;
+  border-radius: 24px;
+  padding: 4px 28px;
+  font-size: 26px;
+  font-weight: 700;
+  line-height: 1.3;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.btn-continuar:hover {
+  background-color: var(--azul-botao-rodape);
+  color: #FFFFFF;
+}
+
+/* Responsividade em telas maiores */
+@media (min-width: 768px) {
+  .opcoes-orcamento {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .opcoes-orcamento input[type="radio"] {
+    position: absolute;
+  }
+}
+
+/* Responsividade quando a tela fecha/diminui na largura ou altura */
+@media (max-width: 600px), (max-height: 550px) {
+  main {
+    padding: 14px 14px 24px;
+  }
+
+  textarea {
+    min-height: 150px;
+  }
+
+  .opcoes-orcamento {
+    grid-template-columns: 1fr;
+  }
+}

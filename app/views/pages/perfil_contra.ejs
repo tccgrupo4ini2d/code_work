@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Perfil - Klebér Roger</title>
+
+  <!-- Fonte Dongle -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Dongle:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- CSS externo -->
+  <link rel="stylesheet" href="css/style_perfil-contratante.css">
+</head>
+<body>
+
+  <div class="pagina">
+
+    <!-- Cabeçalho com a logo cercada pelo <a> (href vazio para você colocar a rota) -->
+    <header>
+      <a href="/home-c" class="link-logo">
+        <img src="img/logo-codework.png" alt="Logo CW" class="logo-img">
+      </a>
+    </header>
+
+    <!-- Conteúdo principal -->
+    <main>
+
+      <!-- Card 1: Foto, nome, estrelas e frase -->
+      <section class="card perfil-topo" aria-label="Dados principais do perfil">
+        <img src="img/contratante.svg" alt="Foto de Klebér Roger" class="foto-perfil">
+
+        <div class="nome-linha">
+          <input type="text" id="nome-usuario" class="input-nome" value="Klebér Roger" aria-label="Nome do usuário">
+          <button type="button" class="btn-icone" data-foco="nome-usuario" aria-label="Editar nome">
+            <img src="icones/lapis.svg" alt="" class="icone-editar">
+          </button>
+        </div>
+
+        <div class="estrelas" aria-label="Avaliação 0 de 5 estrelas">
+          <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+        </div>
+
+        <hr class="divisor-azul">
+
+        <input type="text" id="frase-perfil" class="input-frase" value="Sempre querendo mais..." aria-label="Frase do perfil">
+
+        <hr class="divisor-azul">
+      </section>
+
+      <!-- Card 2: Sobre mim -->
+      <section class="card sobre-mim">
+        <div class="titulo-linha">
+          <h2>Sobre mim</h2>
+          <img src="icones/interrogacao.svg" alt="Ajuda sobre mim" class="icone-ajuda">
+        </div>
+
+        <textarea id="sobre-mim-texto" placeholder="Conte mais sobre você.-"></textarea>
+      </section>
+
+      <!-- Card 3: Informações de contato -->
+      <section class="card contato">
+        <h2>Informações de contato</h2>
+
+        <form>
+          <!-- Email -->
+          <div class="label-com-icone">
+            <label for="email-contato">Email</label>
+            <button type="button" class="btn-icone" data-foco="email-contato" aria-label="Editar email">
+              <img src="icones/lapis.svg" alt="" class="icone-editar-pequeno">
+            </button>
+          </div>
+          <input type="email" id="email-contato" name="email" class="campo-texto">
+
+          <!-- Telefone -->
+          <div class="label-com-icone">
+            <label for="telefone-contato">Telefone</label>
+            <button type="button" class="btn-icone" data-foco="telefone-contato" aria-label="Editar telefone">
+              <img src="icones/lapis.svg" alt="" class="icone-editar-pequeno">
+            </button>
+          </div>
+          <div class="campo-telefone">
+            <img src="img/brasil.png" alt="Bandeira do Brasil" class="bandeira-brasil">
+            <span class="ddi">+55</span>
+            <input type="tel" id="telefone-contato" name="telefone">
+          </div>
+        </form>
+      </section>
+
+    </main>
+  </div>
+
+</body>
+</html>

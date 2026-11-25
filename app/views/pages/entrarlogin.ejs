@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Entrar</title>
+
+  <!-- Fonte Dongle -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Dongle:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- CSS externo -->
+  <link rel="stylesheet" href="css/style_entrar.css">
+</head>
+<body>
+
+  <div class="pagina-login">
+
+    <!-- Cabeçalho com logo -->
+    <header>
+      <a href="/" class="link-logo">
+        <img src="img/logo-codework.png" alt="Logo CW" class="logo-img">
+      </a>
+    </header>
+
+    <!-- Conteúdo principal -->
+    <main>
+      <section class="caixa-login" aria-label="Formulário de login">
+        <div class="topo-login">
+          <h1>Entrar</h1>
+          <p>Bem vindo de volta!</p>
+        </div>
+
+        <form>
+          <label for="email">Email:</label>
+          <div class="campo-icone">
+            <img src="icones/email.svg" alt="" class="icone-campo">
+            <input type="email" id="email" name="email" placeholder="Email">
+          </div>
+
+          <label for="senha">Senha:</label>
+          <div class="campo-icone">
+            <img src="icones/senha.svg" alt="" class="icone-campo">
+            <input type="password" id="senha" name="senha" placeholder="Senha">
+          </div>
+
+          <p class="cadastro-aviso">
+            Não tem conta? <a href="">Crie já</a>
+          </p>
+
+          <button type="submit" class="btn-entrar">Entrar</button>
+        </form>
+
+        <div class="divisor">
+          <span></span>
+          <p>ou</p>
+          <span></span>
+        </div>
+
+        <nav class="redes-sociais" aria-label="Entrar com redes sociais">
+          <a href="" class="btn-rede google">
+            <img src="icones/Google logo.svg" alt="" class="icone-rede">
+            <span>Continue com o Google</span>
+          </a>
+
+          <a href="" class="btn-rede facebook">
+            <img src="icones/Facebook logo.svg" alt="" class="icone-rede">
+            <span>Continue com o Facebook</span>
+          </a>
+
+          <a href="" class="btn-rede apple">
+            <img src="icones/apple.svg" alt="" class="icone-rede">
+            <span>Continue com a Apple</span>
+          </a>
+        </nav>
+      </section>
+    </main>
+
+  </div>
+
+</body>
+</html>

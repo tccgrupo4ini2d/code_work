@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ofertas - CW</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dongle:wght@300;400;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style_freelahome.css">
+</head>
+<body>
+
+    <div class="pagina">
+
+        <!-- Cabeçalho -->
+        <header>
+            <div class="header-conteudo">
+                <a href="/home-f">
+                    <img src="img/logo-codework.png" href="" class="logo" alt="CW">
+                </a>
+
+                <nav class="menu-topo">
+                    <a href="">
+                        <img src="icones/Search.svg" alt="Buscar">
+                    </a>
+                    <a href="">
+                        <img src="icones/garden_notification-fill-16.svg" alt="Notificações">
+                    </a>
+                    <a href="perfil-f">
+                        <img src="img/fotofreela.png" class="avatar" alt="Perfil">
+                    </a>
+                </nav>
+            </div>
+        </header>
+
+        <!-- Conteúdo Principal -->
+        <main>
+            <h1>Olá André moreira.<br>Veja suas ofertas</h1>
+
+            <!-- Abas de alternância -->
+            <nav class="abas">
+                <button type="button" class="aba active" id="btn-propostas" onclick="trocarAba('propostas')">Propostas</button>
+                <button type="button" class="aba" id="btn-projetos" onclick="trocarAba('projetos')">Projetos</button>
+            </nav>
+
+            <!-- Barra de Filtros Única e Organizada -->
+            <section class="filtros">
+                <img src="icones/Filter.svg" class="icone-filtro" alt="Filtrar">
+                <button type="button" class="filtro active" onclick="marcarFiltro(this)">Todas</button>
+                <button type="button" class="filtro" onclick="marcarFiltro(this)">Favoritos</button>
+                <button type="button" class="filtro" onclick="marcarFiltro(this)">Aceitos</button>
+            </section>
+
+            <!-- Tela 1: Propostas -->
+            <section id="tela-propostas" class="grade-cards">
+                <article class="card-proposta">
+                    <div class="card-cabecalho">
+                        <strong class="cliente">Fernando H.</strong>
+                        <span class="prazo">Prazo: 12/12</span>
+                    </div>
+
+                    <h2>E-commerce</h2>
+                    <p class="descricao">E-commerce para meu comércio local de vendas de componentes eletronicos</p>
+
+                    <div class="caixa-preco">
+                        <p class="preco-titulo">
+                            <img src="icones/fa7-solid_balance-scale (1).svg" alt="Balança">
+                            Preço Recomendado
+                        </p>
+                        <strong class="preco-valor">R$4.700,00</strong>
+                    </div>
+
+                    <div class="botoes-acao">
+                        <a href="" class="btn-aceitar">Aceitar</a>
+                        <a href="" class="btn-recusar">Recusar</a>
+                    </div>
+                </article>
+            </section>
+
+            <!-- Tela 2: Projetos -->
+            <section id="tela-projetos" class="escondido">
+                <article class="card-vazio">
+                    <div class="circulo-icone">
+                        <img src="icones/image 10 documento.svg" alt="Documento">
+                    </div>
+                    <p>Você ainda não aceitou nenhuma proposta</p>
+                </article>
+            </section>
+        </main>
+
+        <!-- Botão flutuante de menu -->
+        <a href="/menu" class="botao-flutuante">
+            <img src="icones/Menu.svg" alt="Menu">
+        </a>
+
+    </div>
+
+    <script src="js/script_freelahome.js"></script>
+
+</body>
+</html>

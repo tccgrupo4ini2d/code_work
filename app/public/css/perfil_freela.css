@@ -1,0 +1,386 @@
+/* Paleta do projeto */
+:root {
+  --azul-escuro: #1E527D;
+  --azul-destaque: #4599CD;
+  --azul-medio: #4386AF;
+  --azul-claro: #6DA9CB;
+  --azul-salvar: #001EFF;
+  --cinza-fundo: #F8F9FA;
+  --cinza-borda: #B8C0C8;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Dongle', sans-serif;
+}
+
+body {
+  background-color: var(--cinza-fundo);
+  color: #111111;
+  font-size: 24px;
+  padding-bottom: 32px;
+}
+
+/* Cabeçalho */
+header {
+  background-color: #FFFFFF;
+  padding: 12px 20px;
+  border-bottom: 1px solid var(--azul-claro);
+}
+
+.logo-img {
+  height: 36px;
+  display: block;
+}
+
+/* Conteúdo principal */
+main {
+  max-width: 440px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+/* Card padrão */
+.card {
+  background-color: #FFFFFF;
+  border: 1px solid var(--cinza-borda);
+  border-radius: 18px;
+  padding: 18px;
+}
+
+/* Topo do perfil */
+.perfil-topo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.foto-perfil {
+  width: 105px;
+  height: 105px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+.nome-linha {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+h1 {
+  font-size: 36px;
+  line-height: 1.05;
+  font-weight: 400;
+}
+
+.cargo-titulo {
+  font-size: 24px;
+  line-height: 1.1;
+  color: #222222;
+}
+
+.estrelas {
+  color: #D9D9D9;
+  font-size: 28px;
+  line-height: 1.2;
+  letter-spacing: 3px;
+  margin: 6px 0 12px;
+}
+
+.divisor-card {
+  width: 100%;
+  border: none;
+  border-top: 1px solid #CFD6DE;
+  margin: 10px 0;
+}
+
+.btn-icone {
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+}
+
+.icone-acao {
+  width: 26px;
+  height: 26px;
+  display: block;
+}
+
+.bloco-propostas {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.aviso-propostas {
+  font-size: 22px;
+  line-height: 1.1;
+}
+
+.resumo-experiencia {
+  font-size: 22px;
+  line-height: 1.15;
+  margin: 6px 0 14px;
+}
+
+/* Switches (Agência e Público) */
+.config-switches {
+  width: 100%;
+  max-width: 280px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.switch-item {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.switch-item label {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1;
+  margin-right: auto;
+}
+
+.switch-input {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 48px;
+  height: 24px;
+  border-radius: 20px;
+  background-color: #E2E5E9;
+  position: relative;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.switch-input::before {
+  content: "";
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background-color: #FFFFFF;
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  transition: 0.2s;
+}
+
+.switch-input:checked {
+  background-color: #464DF2;
+}
+
+.switch-input:checked::before {
+  left: 27px;
+}
+
+.icone-ajuda {
+  width: 22px;
+  height: 22px;
+  display: block;
+  flex-shrink: 0;
+}
+
+/* Botão outline de habilidades */
+.btn-habilidades-outline {
+  display: block;
+  width: 100%;
+  text-decoration: none;
+  color: #464DF2;
+  border: 1px solid var(--azul-claro);
+  border-radius: 22px;
+  padding: 2px 14px;
+  font-size: 22px;
+  line-height: 1.3;
+  text-align: center;
+}
+
+/* Sobre mim */
+.titulo-com-ajuda {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+h2 {
+  font-size: 30px;
+  line-height: 1.1;
+  font-weight: 700;
+}
+
+textarea {
+  width: 100%;
+  min-height: 170px;
+  border: 1px solid var(--cinza-borda);
+  border-radius: 16px;
+  padding: 12px 14px;
+  font-size: 22px;
+  line-height: 1.2;
+  color: #111111;
+  resize: vertical;
+  outline: none;
+}
+
+textarea::placeholder {
+  color: #8E959E;
+}
+
+textarea:focus {
+  border-color: var(--azul-destaque);
+}
+
+/* Habilidades e Histórico Profissional */
+.secao-habilidades {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.btn-add-habilidades {
+  display: block;
+  width: 100%;
+  text-decoration: none;
+  background-color: var(--azul-medio);
+  color: #FFFFFF;
+  border-radius: 24px;
+  padding: 4px 16px;
+  font-size: 26px;
+  line-height: 1.3;
+  text-align: center;
+}
+
+.campo-selecao {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.campo-selecao input {
+  width: 100%;
+  height: 44px;
+  border: 1px solid #D5DCE2;
+  border-radius: 10px;
+  padding: 0 36px 0 12px;
+  font-size: 22px;
+  background-color: #FFFFFF;
+}
+
+.seta-baixo {
+  position: absolute;
+  right: 14px;
+  color: #9AA0A6;
+  font-size: 24px;
+  pointer-events: none;
+}
+
+.historico-card h3 {
+  font-size: 28px;
+  line-height: 1.1;
+  margin-bottom: 10px;
+}
+
+.historico-card label {
+  display: block;
+  font-size: 22px;
+  line-height: 1.1;
+  margin-top: 10px;
+  margin-bottom: 6px;
+}
+
+.historico-card input[type="text"],
+.historico-card input[type="date"] {
+  width: 100%;
+  border: 1px solid #8E959E;
+  border-radius: 14px;
+  padding: 4px 14px;
+  font-size: 22px;
+  line-height: 1.3;
+  color: #111111;
+  background-color: #FFFFFF;
+}
+
+.historico-card input::placeholder {
+  color: #9AA0A6;
+}
+
+.textarea-curto {
+  min-height: 110px;
+}
+
+/* Botões Cancelar e Salvar (#001EFF) */
+.acoes-form {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  margin-top: 18px;
+}
+
+.btn-cancelar {
+  text-decoration: none;
+  color: #464DF2;
+  border: 1px solid var(--azul-claro);
+  border-radius: 20px;
+  padding: 2px 20px;
+  font-size: 22px;
+  line-height: 1.3;
+  text-align: center;
+}
+
+.btn-salvar {
+  background-color: var(--azul-salvar);
+  color: #FFFFFF;
+  border: none;
+  border-radius: 20px;
+  padding: 2px 24px;
+  font-size: 22px;
+  line-height: 1.3;
+  cursor: pointer;
+}
+
+/* Cards inferiores (Idiomas, Certificações, GitHub) */
+.card-item-linha {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.subtexto-card {
+  font-size: 22px;
+  line-height: 1.1;
+  color: #222222;
+}
+
+.titulo-github {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.icone-github {
+  width: 24px;
+  height: 24px;
+  display: block;
+}
