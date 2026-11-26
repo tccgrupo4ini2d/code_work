@@ -26,9 +26,14 @@ body {
 
 /* Cabeçalho */
 header {
-  background-color: #FFFFFF;
-  padding: 12px 20px;
+  width: 100%;
+  padding: 20px;
+
   border-bottom: 1px solid var(--azul-claro);
+  background-color: #FFFFFF;
+  display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 header img {

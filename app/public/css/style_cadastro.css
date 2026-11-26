@@ -11,6 +11,7 @@ body {
     justify-content: center;
     padding: 40px 10px;
     margin: 0;
+    padding: 20px;
 }
 
 .cadastro {
@@ -28,8 +29,13 @@ header {
     justify-content: space-between;
     align-items: center;
     border-bottom: 1px solid #ddd;
-    padding-bottom: 10px;
+    width: 100%;
     font-size: 2em;
+    padding-bottom: 15px;
+}
+
+.cabecalho{
+    padding: 0px;
 }
 span {
     font-size: 0.8em;
@@ -160,7 +166,7 @@ form button {
     background-color: #205781;
     color: white;
     margin-top: 30px;
-    font-size: 16px;
+    font-size: 0.8em;
 }
 
 .ou {

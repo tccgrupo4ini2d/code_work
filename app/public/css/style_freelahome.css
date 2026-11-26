@@ -30,6 +30,10 @@ header {
     width: 100%;
     border-bottom: 1px solid #cce3f0;
     background-color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
 }
 
 .header-conteudo {
@@ -39,11 +43,11 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 14px 28px;
+    padding: 20px;
 }
 
 .logo {
-    width: 45px;
+    width: 46px;
     height: auto;
     flex-shrink: 0;
 }
@@ -344,7 +348,7 @@ h1 {
 
 @media (max-width: 600px) {
     .header-conteudo {
-        padding: 14px 16px;
+        padding: 20 px;
     }
 
     main {
