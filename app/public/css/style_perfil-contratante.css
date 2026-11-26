@@ -37,6 +37,9 @@ header {
   padding: 12px 20px;
   border-bottom: 1px solid var(--azul-claro);
   background-color: #FFFFFF;
+      display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .link-logo {
@@ -319,7 +322,7 @@ textarea:focus {
 /* Responsividade quando a janela fecha/diminui na largura ou altura */
 @media (max-width: 600px), (max-height: 550px) {
   header {
-    padding: 10px 16px;
+    padding: 20px;
   }
 
   main {

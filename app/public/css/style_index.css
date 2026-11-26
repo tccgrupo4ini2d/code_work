@@ -21,8 +21,8 @@ span {
 
 
 .cabecalho {
-    height: 42px;
-    padding: 0 12px;
+    height: 65px;
+    padding: 20px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -30,8 +30,9 @@ span {
 }
 
 .logo {
-    width: 34px;
-    height: 28px;
+     width: 45px;
+    height: auto;
+
     display: flex;
     align-items: center;
     justify-content: center;
@@ -45,7 +46,7 @@ span {
 
 .entrar {
     color: #4386AF;
-    font-size: 22px;
+    font-size: 2em;
 }
 
 .icone_entrar {

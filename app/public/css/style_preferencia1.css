@@ -35,9 +35,13 @@ body {
 /* Cabeçalho */
 header {
   width: 100%;
-  padding: 12px 20px;
+  padding: 20px;
+
   border-bottom: 1px solid var(--azul-claro);
   background-color: #FFFFFF;
+  display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .link-logo {
